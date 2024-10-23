@@ -1,0 +1,22 @@
+/* Jeremy Meyers, 10/23/2024 */
+* { 
+    box-sizing: border-box;
+}
+body {
+    font-size: 1.25em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(218, 232, 252);
+    color: #333333;
+    margin: 0;
+}
+p {
+    padding: 1.5em;
+    margin: 0;
+    font-weight: 600;
+}
+p + p {
+    border-top: 1px solid #333333;
+}
+p:last-of-type {
+    border-bottom: 1px solid #333333;
+}
