@@ -1,0 +1,26 @@
+/* Jeremy Meyers, 10/24/2024 */
+/* Starter CSS */
+html, body { 
+    margin: 0;
+}
+/* My CSS */
+* {
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-flow: row;
+    align-items: stretch;
+    height: 100vh;
+}
+#tools {
+    border: 5px solid blue;
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+}
+#draw {
+    border: 5px solid black;
+    margin: 0 auto;
+    flex: 3;
+}
