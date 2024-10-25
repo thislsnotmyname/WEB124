@@ -8,19 +8,41 @@ html, body {
     box-sizing: border-box;
 }
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#paint {
     display: flex;
     flex-flow: row;
     align-items: stretch;
     height: 100vh;
 }
-#tools {
+#sidebar {
     border: 5px solid blue;
-    display: flex;
-    flex-flow: column;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2em;
+}
+#tools {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+}
+.tool {
+    background-color: dodgerblue;
+    color: white;
+    border: 2px outset #CCC;
+    padding: 1.5em;
+    aspect-ratio: 1;
+}
+input[type=color] {
+    border: 5px solid salmon;
+}
+.selected {
+    border: 3px solid #fbff87;
 }
 #draw {
     border: 5px solid black;
-    margin: 0 auto;
-    flex: 3;
+    flex: 4.5;
 }

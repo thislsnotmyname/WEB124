@@ -8,9 +8,17 @@
     <link rel="icon" href="https://fav.farm/🔥">
   </head>
   <body>
-    <div id="tools"></div>
-    <canvas id="draw"></canvas> <!-- Starting Canvas -->
+    <div id="paint">
+      <div id="sidebar">
+        <h1>HTML5 Canvas</h1>
+        <div id="tools">
+          <input type="color" placeholder="#000000">
+          <button type="button" class="tool" id="paintbrush">Paintbrush</button>
+        </div>
+      </div>
+      <canvas id="draw"></canvas> <!-- Starting Canvas -->
 
+    </div>
     <script src="paint.js"></script>
   </body>
 </html>
