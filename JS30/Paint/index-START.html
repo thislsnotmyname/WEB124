@@ -12,8 +12,23 @@
       <div id="sidebar">
         <h1>HTML5 Canvas</h1>
         <div id="tools">
-          <input type="color" placeholder="#000000">
+          <label id="color-picker"><input type="color" id="color" placeholder="#000000"></label>
+          <label name="stroke-size"><input type="number" name="stroke-size" id="stroke-size" min="1" max="100" placeholder="10" value="10"></label>
           <button type="button" class="tool" id="paintbrush">Paintbrush</button>
+          <button type="button" class="tool" id="clear">Clear</button>
+          <div id="coloring-pages">
+            <img src="coloring-pages/apple-pop-art-coloring-page.png" alt="Apple with pop art patterns coloring page" class="pages selected-page">
+            <img src="coloring-pages/beach-ball-pop-art-coloring-page.png" alt="Beach ball with pop art patterns coloring page" class="pages">
+            <img src="coloring-pages/clover-pop-art-coloring-page.png" alt="4-leaf clover with pop art patterns coloring page" class="pages">
+            <img src="coloring-pages/earth-pop-art-coloring-page.png" alt="Planet Earth with pop art patterns coloring page" class="pages">
+            <img src="coloring-pages/ice-cream-coloring-page.png" alt="Ice cream coloring page" class="pages">
+            <img src="coloring-pages/pear-coloring-page.png" alt="Pear coloring page" class="pages">
+            <img src="coloring-pages/pepper-coloring-page.png" alt="Pepper coloring page" class="pages">
+            <img src="coloring-pages/shamrock-pop-art-coloring-page.png" alt="Shamrock with pop art patterns coloring page" class="pages">
+            <img src="coloring-pages/smiley-pop-art-coloring-page.png" alt="Smiley face with pop art patterns coloring page" class="pages">
+            <img src="coloring-pages/snowman-coloring-page.png" alt="Snowman coloring page" class="pages">
+            <img src="coloring-pages/sun-pop-art-coloring-page.png" alt="Sun with pop art patterns coloring page" class="pages">
+          </div>
         </div>
       </div>
       <canvas id="draw"></canvas> <!-- Starting Canvas -->
