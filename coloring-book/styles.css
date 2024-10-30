@@ -70,10 +70,10 @@ label {
     padding: 0;
 }
 #stroke-size {
-    aspect-ratio: 3;
+    aspect-ratio: 3 / 1;
     font-weight: bold;
     font-size: 1.125em;
-    padding: 0.5em 0.25em;
+    padding: 0.75em 0.25em;
     width: 4em;
     margin-top: 0.5em;
 }
