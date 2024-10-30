@@ -119,10 +119,18 @@ TOOLS.clear.element.addEventListener('mousedown', TOOLS.clear.clearCanvas);
 
 document.querySelector('#coloring-pages').addEventListener('click', (e) => {
     if (e.target.tagName === "DIV") return;
+
     if (document.querySelector('.selected-page')) {
-        document.querySelector('.selected-page').classList.remove('selected-page');
+        const previousPage = document.querySelector('.selected-page');
+        previousPage.classList.remove('selected-page');
+        if (e.target == previousPage) {
+            canvas.style.background = `none`;
+            return;
+        }
     }
-    e.target.className = 'pages selected-page';
+
+    e.target.classList.toggle('selected-page');
+
     canvas.style.background = `no-repeat center url(${e.target.src})`;
     canvas.style.backgroundSize = 'contain';
 });
