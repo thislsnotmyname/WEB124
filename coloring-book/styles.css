@@ -13,6 +13,8 @@ body {
 }
 h1, h2 {
     margin: 0;
+    border-bottom: 0.25em double #FF6978;
+    border-radius: 0.25em;
 }
 label {
     text-align: center;
@@ -48,7 +50,7 @@ label {
     aspect-ratio: 1;
     border: 0.3em solid #B1EDE8;
     border-radius: 0.125em;
-    box-shadow: 0 0 0 1px black;
+    box-shadow: 0 0 0 1px #222;
 }
 .tool:active {
     border: 0.3em groove #B1EDE8;
@@ -59,7 +61,7 @@ label {
 #color-picker {
     width: 4em;
     border: 0.4em solid #B1EDE8;
-    box-shadow: 0 0 0 1px black;
+    box-shadow: 0 0 0 1px #222;
     aspect-ratio: 1;
     background-image: url("./paint-brush-drawing-icon-white.svg");
     background-repeat: no-repeat;
@@ -87,6 +89,9 @@ label {
     gap: 1em;
     overflow: auto;
     padding: 1em;
+    border: 1px solid #476C9B;
+    box-shadow: 0 0 0 0.25em #B1EDE8, 0 0 0 0.35em #222;
+    border-radius: 0.125em;
 }
 .pages {
     border: 1px solid #222;
