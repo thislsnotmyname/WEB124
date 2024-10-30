@@ -13,7 +13,7 @@ body {
 }
 h1, h2 {
     margin: 0;
-    border-bottom: 0.25em double #FF6978;
+    border-bottom: 0.25em double #FF697880;
     border-radius: 0.25em;
 }
 label {
