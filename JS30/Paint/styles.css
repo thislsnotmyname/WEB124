@@ -1,5 +1,5 @@
-/* Jeremy Meyers, 10/24/2024 */
-/* Starter CSS */
+/* Jeremy Meyers, 10/30/2024 */
+/* Wes Bos's CSS */
 html, body { 
     margin: 0;
 }
@@ -8,8 +8,14 @@ html, body {
     box-sizing: border-box;
 }
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* background-color: #CCC; */
+    font-family: 'Sora', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #02111B;
+}
+h1, h2 {
+    margin: 0;
+}
+label {
+    text-align: center;
 }
 #paint {
     display: flex;
@@ -18,55 +24,84 @@ body {
     height: 100vh;
 }
 #sidebar {
-    border: 5px solid blue;
+    border: 5px inset #476C9B;
+    border-right: none;
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding: 2em;
     overflow: auto;
-    background-color: #ccc;
+    background-color: #B1EDE8;
+    gap: 1.5em;
 }
 #tools {
     display: flex;
     flex-flow: row wrap;
-    align-items: flex-start;
+    align-items: flex-end;
     gap: 1em;
 }
 .tool {
-    background-color: dodgerblue;
-    color: white;
-    border: 2px outset #CCC;
-    padding: 1.5em;
+    background-color: #FF6978;
+    color: #FFFCF9;
+    padding: 1em;
     aspect-ratio: 1;
+    border: 0.3em solid #B1EDE8;
+    border-radius: 0.125em;
+    box-shadow: 0 0 0 1px black;
+}
+.tool:active {
+    border: 0.3em groove #B1EDE8;
 }
 #color {
     visibility: hidden;
 }
 #color-picker {
     width: 4em;
-    border: 0.4em solid #ccc;
+    border: 0.4em solid #B1EDE8;
     box-shadow: 0 0 0 1px black;
     aspect-ratio: 1;
+    background-image: url("./paint-brush-drawing-icon-white.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 45%;
+    padding: 0;
+}
+#stroke-size {
+    aspect-ratio: 3;
+    font-weight: bold;
+    font-size: 1.125em;
+    padding: 0.5em 0.25em;
+    width: 4em;
+    margin-top: 0.5em;
 }
 #draw {
-    border: 5px solid black;
+    border: 5px solid #476C9B;
     flex: 4.5;
 }
 #coloring-pages {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
     gap: 1em;
+    overflow: auto;
+    padding: 1em;
 }
 .pages {
-    aspect-ratio: 1;
-    width: 47%;
+    border: 1px solid #222;
+    max-width: 45%;
 }
 .selected-page {
     border: 4px solid #ccc;
     box-shadow: 0 0 5px 5px #fbff87;
 }
-/* #overlay {
-    z-index: 2;
-    position: absolute;
-} */
+.trash {
+    background-image: url("./recycle-bin-line-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 2em;
+    aspect-ratio: 1;
+    display: inline-block;
+}
