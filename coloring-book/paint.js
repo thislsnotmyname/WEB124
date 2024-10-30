@@ -33,7 +33,7 @@ let lastY = 0;
 const TOOLS = {
     currentTool: 'paintbrush',
     paintbrush: function(e) {
-        // Wes Bos's draw function stripped to the basics
+        // Wes Bos's draw function stripped to the basics; original, unneeded code commented out
         
         if (!isDrawing) return;
         
