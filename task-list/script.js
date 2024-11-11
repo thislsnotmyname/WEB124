@@ -21,7 +21,7 @@ function addItem(e) {
 
 function populateList(itemsList, items = []) {
     const markup = items.map((item, i) => {
-        return `<li>
+        return `<li class="task">
             <input type="checkbox" data-index="${i}" id="item${i}" ${item.done ? "checked" : ""}>
             <label for="item${i}">${item.text}</label>
         </li>`;
@@ -39,6 +39,19 @@ function toggleDone(e) {
     populateList(itemsList, items);
 }
 
+// Mine
+const prioritySelect = document.querySelector('#priority');
+const priorityCircle = document.querySelector('.priority-level');
+
+prioritySelect.addEventListener('change', (e) => {
+    const priorityLevels = {'low': 'green', 'med': 'yellow', 'high': 'red'};
+    console.log(e);
+    const newSelection = e.target.value;
+    priorityCircle.className = 'priority-level';
+    priorityCircle.classList.add(priorityLevels[newSelection]);
+})
+
+// TC
 itemsList.addEventListener('click', toggleDone);
 addItems.addEventListener('submit', addItem);
 
