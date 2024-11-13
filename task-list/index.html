@@ -56,6 +56,18 @@
       </div>
       <input type="text" name="item" placeholder="Task Name" required>
       <input type="submit" value="+ Add Task">
+      <hr>
+      <div class="filter-container">
+      <label for="filter">Filter by: &nbsp;</label>
+      <select title="filter" name="filter" id="filter">
+        <option value="asc">Task Name &lpar;Ascending&rpar;</option>
+        <option value="desc">Task Name &lpar;Descending&rpar;</option>
+        <option value="lth">Priority &lpar;Low to High&rpar;</option>
+        <option value="htl">Priority &lpar;High to Low&rpar;</option>
+        <option value="uncomp">Uncompleted</option>
+        <option value="comp">Completed</option>
+      </select>
+      </div>
       <input type="button" id="clear" value="Clear All">
     </form>
   </div>
