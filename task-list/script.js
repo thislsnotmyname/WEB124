@@ -1,5 +1,5 @@
 "use strict";
-// Jeremy Meyers, 11/11/2024
+// Jeremy Meyers, 11/13/2024
 
 // TC
 const addItems = document.querySelector('.add-items');
@@ -8,20 +8,22 @@ const items = JSON.parse(localStorage.getItem('items')) || [];
 
 function addItem(e) {
     e.preventDefault();
-    const text = this.querySelector('[name=item]').value;
+    const text = e.currentTarget.querySelector('[name=item]').value;
     const item = {
         text,
         done: false,
+        // Mine
+        priority: prioritySelect.value,
     }
     items.push(item);
     populateList(itemsList, items);
     localStorage.setItem('items', JSON.stringify(items));
-    this.reset();
+    e.currentTarget.reset();
 }
 
 function populateList(itemsList, items = []) {
     const markup = items.map((item, i) => {
-        return `<li class="task">
+        return `<li class="task ${item.priority}">
             <input type="checkbox" data-index="${i}" id="item${i}" ${item.done ? "checked" : ""}>
             <label for="item${i}">${item.text}</label>
         </li>`;
@@ -42,17 +44,32 @@ function toggleDone(e) {
 // Mine
 const prioritySelect = document.querySelector('#priority');
 const priorityCircle = document.querySelector('.priority-level');
+const clearAll = document.querySelector('#clear');
 
-prioritySelect.addEventListener('change', (e) => {
-    const priorityLevels = {'low': 'green', 'med': 'yellow', 'high': 'red'};
-    console.log(e);
-    const newSelection = e.target.value;
+function changePriorityCircle() {
+    const newSelection = prioritySelect.value;
     priorityCircle.className = 'priority-level';
-    priorityCircle.classList.add(priorityLevels[newSelection]);
-})
+    priorityCircle.classList.add(newSelection);
+}
+function clearAllTasks() {
+    if (confirm("Are you sure you want to clear all tasks?")) {
+        items.length = 0;
+        localStorage.setItem('items', JSON.stringify(items));
+        populateList(itemsList, items);
+    }
+}
+
+prioritySelect.addEventListener('change', changePriorityCircle);
+clearAll.addEventListener('click', clearAllTasks);
 
 // TC
 itemsList.addEventListener('click', toggleDone);
-addItems.addEventListener('submit', addItem);
 
+// Modified by me
+addItems.addEventListener('submit', function (e) {
+    addItem(e);
+    changePriorityCircle();
+});
+
+// TC
 populateList(itemsList, items);

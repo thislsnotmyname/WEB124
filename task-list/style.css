@@ -1,9 +1,9 @@
-/* Jeremy Meyers, 11/11/2024 */
+/* Jeremy Meyers, 11/13/2024 */
 /* TC */
 html {
   box-sizing: border-box;
-  background: url("oh-la-la.jpeg") center no-repeat;
-  background-size: cover;
+  /* background: url("oh-la-la.jpeg") center no-repeat; */
+  /* background-size: cover; */
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -18,20 +18,31 @@ html {
   box-sizing: inherit;
 }
 
-svg {
+/* svg {
   fill: white;
   background: rgba(0, 0, 0, 0.1);
   padding: 20px;
   border-radius: 50%;
   width: 200px;
   margin-bottom: 50px;
-}
+} */
 
 .wrapper {
   padding: 20px;
-  max-width: 350px;
+  /* max-width: 350px; */
   background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1); */
+
+  /* Mine */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  min-width: calc(50vw + 1.5em);
+  max-width: 50vw;
+  aspect-ratio: 1.25;
+  background-image: url("bulletin-board.jpg");
+  border: 1.5em solid #ffffff00;
+  border-image: url("rosewood_veneer.jpg") 20 round;
 }
 
 h2 {
@@ -45,13 +56,27 @@ h2 {
   padding: 0;
   text-align: left;
   list-style: none;
+
+  /* Mine */
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1em;
 }
 
 .tasks li {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  padding: 10px 0;
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
+  /* padding: 10px 0; */
   font-weight: 100;
   display: flex;
+
+  /* Mine */
+  padding: 1em;
+  background-image: url("sticky-note/yellow.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 5em;
+  aspect-ratio: 1;
+  flex-basis: 23%;
 }
 
 .tasks label {
@@ -69,11 +94,20 @@ h2 {
 }
 
 .tasks input:checked + label:before {
-  content: "🌮";
+  /* content: "🌮"; */
+  content: "✅";
 }
 
 .add-items {
   margin-top: 20px;
+  
+  /* Mine */
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1em;
+  justify-content: center;
+  padding-top: 1em;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .add-items input {
@@ -87,20 +121,37 @@ h2 {
   display: flex;
   align-items: center;
 }
+.priority-container label {
+  font-weight: bold;
+  font-size: 1.25em;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.95);
+}
 .priority-level {
-  font-size: 2em;
-  
-  text-shadow: 0 0  1em black;
+  width: 1em;
+  aspect-ratio: 1;
+  box-shadow: 0 0 0.125em 0.125em #00000080;
+  border-radius: 50%;
+  margin: 0.5em;
 }
 #priority {
-  font-size: 1.25em;
+  font-size: 1em;
 }
-.green {
-  color: green;
+
+div.low {
+  background-color: #6AE86A;
 }
-.yellow {
-  color: yellow;
+div.med {
+  background-color: #F6EB93;
 }
-.red {
-  color: red;
+div.high {
+  background-color: #EA6262;
+}
+.task.low {
+  background-image: url("sticky-note/green.png") !important;
+}
+.task.med {
+  background-image: url("sticky-note/yellow.png") !important;
+}
+.task.high {
+  background-image: url("sticky-note/red.png") !important;
 }
