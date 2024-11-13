@@ -64,8 +64,9 @@ function clearAllTasks() {
 }
 
 function filterTasks() {
+    localStorage.setItem('filter', filterSelect.value);
     const priorities = {low: 0, med: 1, high: 2};
-    switch (this.value) {
+    switch (filterSelect.value) {
         case 'desc':
             const descending = items.toSorted((a, b) => b.text.localeCompare(a.text));
             populateList(itemsList, descending);
@@ -109,3 +110,29 @@ clearAll.addEventListener('click', clearAllTasks);
 
 // WB's initialization of the list
 populateList(itemsList, items);
+
+// My initialization of the filter and starter tasks
+if (items.length === 0) {
+    items.push(
+        {
+            text: 'Welcome! Tasks have three priority levels: Low, Medium, and High.',
+            done: false,
+            priority: 'low',
+        },
+        {
+            text: 'You can filter task by several parameters down below.',
+            done: false,
+            priority: 'med',
+        },
+        {
+            text: "Check off tasks when you're done!",
+            done: true,
+            priority: 'high',
+        }
+    );
+    localStorage.setItem('filter', 'lth');
+    localStorage.setItem('items', JSON.stringify(items));
+}
+
+filterSelect.value = localStorage.getItem('filter') || 'asc';
+filterTasks();
