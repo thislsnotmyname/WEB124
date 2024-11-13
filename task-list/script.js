@@ -120,7 +120,7 @@ if (items.length === 0) {
             priority: 'low',
         },
         {
-            text: 'You can filter task by several parameters down below.',
+            text: 'You can filter tasks by several parameters down below.',
             done: false,
             priority: 'med',
         },
