@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   height="800px"
+   width="800px"
+   version="1.1"
+   id="Layer_1"
+   viewBox="0 0 512.001 512.001"
+   xml:space="preserve"
+   sodipodi:docname="spaceship-no-antenna.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs13" /><sodipodi:namedview
+   id="namedview13"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   inkscape:zoom="0.98375"
+   inkscape:cx="399.49174"
+   inkscape:cy="331.89327"
+   inkscape:window-width="1920"
+   inkscape:window-height="1001"
+   inkscape:window-x="-9"
+   inkscape:window-y="-9"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1"
+   inkscape:document-units="px" />
+<path
+   style="fill:#ff4d30"
+   d="m 136.662,416.96197 c 23.923,41.064 68.391,68.68 119.338,68.68 50.946,0 95.415,-27.616 119.338,-68.68 z"
+   id="path1" />
+<path
+   style="opacity:0.1;fill:#231f20;enable-background:new"
+   d="m 155.029,416.96197 h -18.366 c 23.923,41.064 68.391,68.68 119.338,68.68 3.086,0 6.147,-0.106 9.183,-0.306 -47.075,-3.09399 -87.682,-29.798 -110.155,-68.374 z"
+   id="path2" />
+<path
+   style="fill:#3a5d74"
+   d="m 33.661,366.71497 v 30.119 c 0,11.74 9.519,21.259 21.26,21.259 H 457.08 c 11.741,0 21.26,-9.519 21.26,-21.259 v -30.119 H 33.661"
+   id="path3" />
+<path
+   style="opacity:0.1;fill:#231f20;enable-background:new"
+   d="M 52.027,396.83397 V 366.71498 H 33.661 v 30.119 c 0,11.74 9.519,21.259 21.26,21.259 h 18.366 c -11.741,-0.001 -21.26,-9.52 -21.26,-21.25901 z"
+   id="path4" />
+
+<path
+   style="fill:#90c8ec"
+   d="M 105.744,264.11197 H 406.256 C 393.298,192.87198 330.978,138.84299 256,138.84299 c -74.979,0 -137.299,54.02899 -150.256,125.26898 z"
+   id="path6" />
+<path
+   style="fill:#3a5d74"
+   d="m 333.362,264.11197 v -31.061 c 0,-11.74199 -9.519,-21.26099 -21.26,-21.26099 H 199.9 c -11.744,0 -21.261,9.519 -21.261,21.26099 v 31.061 z"
+   id="path7" />
+
+
+<path
+   style="fill:#578cad"
+   d="m 382.844,368.97497 h 107.897 c 11.741,0 21.26,-9.519 21.26,-21.259 v -17.598 c 0,-37.704 -30.564,-68.267 -68.267,-68.267 H 68.266 C 30.564,261.85197 0,292.41497 0,330.11797 v 17.598 c 0,11.74001 9.519,21.25901 21.259,21.25901 h 361.585"
+   id="path11" />
+<path
+   style="opacity:0.1;fill:#231f20;enable-background:new"
+   d="m 18.366,347.71597 v -17.598 c 0,-37.704 30.564,-68.267 68.266,-68.267 H 68.266 C 30.564,261.85197 0,292.41497 0,330.11797 v 17.598 c 0,11.74001 9.519,21.25901 21.259,21.25901 h 18.366 c -11.74,0 -21.259,-9.519 -21.259,-21.25901 z"
+   id="path12" />
+<path
+   style="fill:#ff9737"
+   d="M 449.107,323.88897 H 62.892 c -4.681,0 -8.477,-3.79399 -8.477,-8.47699 0,-4.683 3.795,-8.47699 8.477,-8.47699 h 386.215 c 4.683,0 8.477,3.79399 8.477,8.47699 0,4.68199 -3.795,8.47699 -8.477,8.47699 z"
+   id="path13" />
+</svg>

@@ -1,0 +1,141 @@
+/* Jeremy Meyers, 11/20/2024 */
+/* TC */
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  /* background: #ffc600; */
+
+  background: url('NightSky.jpg') center center no-repeat;
+  color: aliceblue;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Amatic SC', cursive;
+}
+
+h1 {
+  text-align: center;
+  font-size: 10rem;
+  line-height: 1;
+  margin-bottom: 0;
+
+  margin-top: 3rem;
+}
+
+.score {
+  background: rgba(255,255,255,0.2);
+  padding: 0 3rem;
+  line-height: 1;
+  border-radius: 1rem;
+}
+
+.game {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.hole {
+  flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hole:after {
+  display: block;
+  /* background: url(dirt.svg) bottom center no-repeat; */
+  /* background-size: contain; */
+  content: '';
+  /* width: 100%; */
+  /* height:70px; */
+  position: absolute;
+  z-index: 2;
+  bottom: -30px;
+
+  width: 100%;
+  height: 40%;
+  background: url('spaceship-no-antenna.svg') bottom center no-repeat;
+  background-size: 50%;
+}
+
+.mole {
+  background: url('mole.svg') bottom center no-repeat;
+  background-size: 60%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition:all 0.4s;
+
+  background-image: url('alien.svg');
+}
+
+.hole.up .mole {
+  top: 0;
+}
+
+/* My styles */
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+#start {
+  display: block;
+  margin: 1rem auto;
+  padding: 1rem;
+  font-size: 2em;
+  border: 0.25em solid black;
+  border-radius: 1rem;
+}
+
+#high-score-banner {
+  display: none;
+  opacity: 0;
+  position: fixed;
+  top: calc(50% - 4rem - 5rem);
+  width: 100vw;
+  color: #1c1c1cee;
+  background-color: #41414178;
+  font-size: 10rem;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2rem;
+  z-index: 2;
+  transition: opacity 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+#timer {
+  position: fixed;
+  bottom: 2.5%;
+  left: 2.5%;
+  font-size: 10rem;
+  text-align: center;
+  width: 12.5rem;
+  aspect-ratio: 1;
+  font-weight: bold;
+  border: 0.25rem solid black;
+  border-radius: 50%;
+  color: #00000080;
+  background-color: #ffffffdd;
+}
+
+.mole.shiny {
+  background-image: url('alien_shiny.svg') !important;
+}
+
+.mole.human {
+  background-image: url('santa-claus.png') !important;
+  background-size: 110%;
+}
