@@ -1,4 +1,4 @@
-/* Jeremy Meyers, 11/29/2024 */
+/* Jeremy Meyers, 11/30/2024 */
 :root {
     --bg-color: #FAF3DD;
     --neutral-color: #191919DD;
@@ -14,16 +14,14 @@ body {
     width: 100vw;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     background-color: var(--bg-color);
     color: var(--neutral-color);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #wrapper {
-    border: 0.25em solid var(--bg-color);
+    flex-basis: 99%;
     padding: 1.5em;
-    box-shadow: 0 0 0.25em 0.5em var(--secondary);
-    border-radius: 0em;
     background-color: var(--primary);
 }
 #num,
@@ -36,9 +34,37 @@ body {
 }
 #paragraphs {
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
+    gap: 1em;
+}
+#paragraphs > p {
+    flex: 1 1 45%;
+    margin: 0;
 }
 
-@media (min-width: 800px) {
-    
+@media (min-width: 768px) {
+    body {
+        align-items: center;
+    }
+    #wrapper {
+        flex-basis: 92.5%;
+        aspect-ratio: 1.5;
+    }
+    #paragraphs > p {
+        flex-basis: 20%;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        align-items: center;
+    }
+    #wrapper {
+        flex-basis: auto;
+        border: 0.25em solid var(--bg-color);
+        box-shadow: 0 0 0.25em 0.5em var(--secondary);
+        border-radius: 0em;
+        aspect-ratio: 2;
+    }
 }
